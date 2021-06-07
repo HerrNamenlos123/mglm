@@ -1,4 +1,6 @@
-# mglm
+# MicroGLM vector library for Arduino
+
+This library provides 2D and 3D vectors like https://github.com/g-truc/glm
 
 ## License
 
