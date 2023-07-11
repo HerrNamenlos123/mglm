@@ -1,6 +1,38 @@
 # MicroGLM vector library for Arduino
 
-This library provides 2D and 3D vectors like https://github.com/g-truc/glm
+This library provides 2D and 3D vectors like https://github.com/g-truc/glm.
+It implements the most important functions while trying to be consistent
+with the original library. The vectors are in a `glm` namespace, so code can 
+be compiled on desktop platforms using the real `glm` library, and on Arduino 
+using the `MicroGLM` port, while keeping the same code.
+
+Example usage:
+```cpp
+#ifdef ARDUINO
+#include <MicroGLM.h>
+#else
+#include <glm/glm.hpp>
+#endif
+
+void foo() {
+    glm::vec3 v1(1, 2, 3);
+    glm::vec3 v2(4, 5, 6);
+    auto v3 = v1 + v2;
+    auto v4 = v1 * 2.0f;
+    auto v5 = (v1 + v2) / 2.0f + (v1 - v2) / 10.f;
+
+    float dotProduct = glm::dot(v1, v2);
+    glm::vec3 crossProduct = glm::cross(v1, v2);
+
+    glm::vec2 velocity;
+    glm::vec2 position = glm::vec2(1, 2);
+    glm::vec2 flipped = position * glm::vec2(1, -1);
+    velocity += position * 0.1f;
+}
+```
+
+This code will compile both on Arduino and on desktop platforms, given that
+the libraries are available.
 
 ## License
 
