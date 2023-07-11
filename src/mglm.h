@@ -1,12 +1,6 @@
-/*
- Name:		mglm.h
- Created:	6/7/2021 12:12:34 PM
- Author:	HerrNamenlos123
- Editor:	http://www.visualmicro.com
-*/
 
-#ifndef _mglm_h
-#define _mglm_h
+#ifndef MICROGLM_H
+#define MICROGLM_H
 
 #include "inttypes.h"
 
@@ -195,5 +189,4 @@ bool isnan(const mglm::ivec2& v);
 bool isnan(const mglm::vec3& v);
 bool isnan(const mglm::ivec3& v);
 
-#endif
-
+#endif // MICROGLM_H

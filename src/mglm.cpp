@@ -1,9 +1,3 @@
-/*
- Name:		mglm.cpp
- Created:	6/7/2021 12:12:34 PM
- Author:	HerrNamenlos123
- Editor:	http://www.visualmicro.com
-*/
 
 #include "mglm.h"
 #include "math.h"
